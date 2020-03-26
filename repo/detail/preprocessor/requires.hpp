@@ -25,7 +25,7 @@
 
 #  define REPO_REQUIRES_IMPL(unique_name, ...) bool unique_name = true, typename std::enable_if<(unique_name and __VA_ARGS__)>::type* = nullptr
 
-#  define REPO_REQUIRES(...) REPO_REQUIRES_IMPL(CUDEX_MAKE_UNIQUE(__deduced_true), __VA_ARGS__)
+#  define REPO_REQUIRES(...) REPO_REQUIRES_IMPL(REPO_MAKE_UNIQUE(__deduced_true), __VA_ARGS__)
 
 #elif defined(REPO_REQUIRES)
 
