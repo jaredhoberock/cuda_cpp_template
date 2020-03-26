@@ -8,8 +8,8 @@
 #    error "Either all of REPO_NAMESPACE, REPO_NAMESPACE_OPEN_BRACE, and REPO_NAMESPACE_CLOSE_BRACE must be defined, or none of them."
 #  endif
 
-#  define REPO_NAMESPACE cudex
-#  define REPO_NAMESPACE_OPEN_BRACE namespace cudex {
+#  define REPO_NAMESPACE repo
+#  define REPO_NAMESPACE_OPEN_BRACE namespace repo {
 #  define REPO_NAMESPACE_CLOSE_BRACE }
 #  define REPO_NAMESPACE_NEEDS_UNDEF
 
