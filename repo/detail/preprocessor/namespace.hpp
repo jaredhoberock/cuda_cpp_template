@@ -32,3 +32,16 @@
 
 #endif
 
+#if !defined(REPO_DETAIL_NAMESPACE)
+
+// allow the user to define a singly-nested namespace for private implementation details
+#  define REPO_DETAIL_NAMESPACE detail
+#  define REPO_DETAIL_NAMESPACE_NEEDS_UNDEF
+
+#elif defined(REPO_DETAIL_NAMESPACE_NEEDS_UNDEF)
+
+#  undef REPO_DETAIL_NAMESPACE
+#  undef REPO_DETAIL_NAMESPACE_NEEDS_UNDEF
+
+#endif
+

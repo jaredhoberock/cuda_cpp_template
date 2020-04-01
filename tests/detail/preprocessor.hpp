@@ -16,6 +16,14 @@
 #error REPO_CONCATENATE_IMPL defined in client code.
 #endif
 
+#ifdef REPO_DETAIL_NAMESPACE
+#error REPO_DETAIL_NAMESPACE defined in client code.
+#endif
+
+#ifdef REPO_DETAIL_NAMESPACE_NEEDS_UNDEF
+#error REPO_DETAIL_NAMESPACE_NEEDS_UNDEF defined in client code.
+#endif
+
 #ifdef REPO_EXEC_CHECK_DISABLE
 #error REPO_EXEC_CHECK_DISABLE defined in client code.
 #endif
