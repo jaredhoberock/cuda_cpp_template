@@ -27,6 +27,10 @@
 
 #  define REPO_REQUIRES(...) REPO_REQUIRES_IMPL(REPO_MAKE_UNIQUE(__deduced_true), __VA_ARGS__)
 
+#  define REPO_REQUIRES_DEF_IMPL(unique_name, ...) bool unique_name, typename std::enable_if<(unique_name and __VA_ARGS__)>::type*
+
+#  define REPO_REQUIRES_DEF(...) REPO_REQUIRES_DEF_IMPL(REPO_MAKE_UNIQUE(__deduced_true), __VA_ARGS__)
+
 #elif defined(REPO_REQUIRES)
 
 #  ifdef REPO_CONCATENATE_IMPL
@@ -47,6 +51,14 @@
 
 #  ifdef REPO_REQUIRES
 #    undef REPO_REQUIRES
+#  endif
+
+#  ifdef REPO_REQUIRES_DEF_IMPL
+#    undef REPO_REQUIRES_DEF_IMPL
+#  endif
+
+#  ifdef REPO_REQUIRES_DEF
+#    undef REPO_REQUIRES_DEF
 #  endif
 
 #endif

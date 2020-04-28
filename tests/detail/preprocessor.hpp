@@ -64,6 +64,14 @@
 #error REPO_REQUIRES_IMPL defined in client code.
 #endif
 
+#ifdef REPO_REQUIRES_DEF
+#error REPO_REQUIRES_DEF defined in client code.
+#endif
+
+#ifdef REPO_REQUIRES_DEF_IMPL
+#error REPO_REQUIRES_DEF_IMPL defined in client code.
+#endif
+
 
 void test_preprocessor() {}
 
