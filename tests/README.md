@@ -8,6 +8,14 @@ To build and execute all test programs:
 
     $ make test
 
+To build and execute all test programs in a subdirectory named `subdirectory/` (note the trailing slash):
+
+    $ make subdirectory/
+
+To build and execute all test programs in all subdirectories rooted in the current directory:
+
+    $ make all
+
 # Details
 
 Each `<name>.hpp` file in this directory is a C++ file containing a function named `test_<name>`.
